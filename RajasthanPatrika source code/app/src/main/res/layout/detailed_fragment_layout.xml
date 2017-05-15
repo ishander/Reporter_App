@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:background="@color/white_color"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_photo"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:clickable="false"
+                        android:src="@drawable/camera_gray" />
+
+
+                    <TextView
+                        android:id="@+id/txt_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_photo"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/gray_txt_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_video"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="true"
+                        android:src="@drawable/video_gray" />
+
+                    <TextView
+                        android:id="@+id/txt_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_video"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/gray_txt_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_audio"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:src="@drawable/audio_gray" />
+
+                    <TextView
+                        android:id="@+id/txt_audio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/txt_audio"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/gray_txt_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_light"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <HorizontalScrollView
+                    android:id="@+id/xml_full_img_hor_below_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginTop="15dip"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"></LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <com.rajasthnapatrika_prod.utils.HorizontalListView
+                android:id="@+id/hlvSimpleList"
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:visibility="visible"
+                android:layout_marginTop="10dip"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="?android:attr/actionBarSize"
+                android:layout_marginLeft="12dip"
+                android:layout_marginRight="12dip"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_domain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toLeftOf="@+id/img_personality_topic_mic"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                    <EditText
+                        android:id="@+id/et_domain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/domain_txt" />
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toLeftOf="@+id/img_personality_topic_mic"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+
+                    <EditText
+                        android:id="@+id/et_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/category_txt" />
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_scope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toLeftOf="@+id/img_personality_topic_mic"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+
+                    <EditText
+                        android:id="@+id/et_scope"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/scope_txt" />
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_priorty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_toLeftOf="@+id/img_personality_topic_mic"
+                    app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                    <EditText
+                        android:id="@+id/et_priorty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/priority_txt" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="20dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_personality_topic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_personality_topic_mic"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                        <EditText
+                            android:id="@+id/et_personality_topic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/personality_topic_txt"
+                            android:inputType="text|textCapWords|textMultiLine"
+                            android:maxLength="255"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/img_personality_topic_mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dip"
+                        android:singleLine="true"
+                        android:background="@drawable/mic"
+                        android:padding="5dip"
+                        android:paddingBottom="10dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/txt_limit_255"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_heading_mic"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                        <EditText
+                            android:id="@+id/et_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/heading_txt"
+                            android:inputType="text|textCapWords|textMultiLine"
+                            android:maxLength="140"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip">
+
+                            <requestFocus />
+                        </EditText>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/img_heading_mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/mic"
+                        android:padding="5dip"
+                        android:paddingBottom="10dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@color/gray_view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/txt_limit_140"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="25dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_subheading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_sub_heading_mic"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                        <EditText
+                            android:id="@+id/et_sub_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/sub_heading_txt"
+                            android:inputType="text|textCapWords|textMultiLine"
+                            android:maxLength="280"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/img_sub_heading_mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/mic"
+                        android:padding="5dip"
+                        android:paddingBottom="10dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="40dip"
+                    android:background="@color/gray_view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/txt_limit_280"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="25dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_intro_mic"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                        <EditText
+                            android:id="@+id/et_intro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:gravity="top|left"
+                            android:hint="@string/intro_txt"
+                            android:inputType="text|textCapWords|textMultiLine"
+                            android:maxLength="560"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/img_intro_mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/mic"
+                        android:padding="5dip"
+                        android:paddingBottom="10dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="50dip"
+                    android:background="@color/gray_view_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/txt_limit_560"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="25dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_body_mic"
+                        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_add_stroys">
+
+                        <EditText
+                            android:id="@+id/et_body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/body_txt"
+                            android:inputType="text|textCapWords|textMultiLine"
+                            android:paddingBottom="10dip"
+                            android:paddingTop="10dip" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/img_body_mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="25dip"
+                        android:background="@drawable/mic"
+                        android:padding="5dip"
+                        android:paddingBottom="10dip" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/gray_view_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/submit_selector"
+        android:padding="10dip"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</RelativeLayout>

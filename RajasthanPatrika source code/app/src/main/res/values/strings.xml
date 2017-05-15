@@ -1,0 +1,138 @@
+<resources>
+
+
+    <string name="app_name">Patrika Reporter_Prod</string>
+    <string name="sender_id">345313043408</string>
+    <string name="server_key">AIzaSyCllRJUJva1U052Xy09hVj24Vmo3glvgZQ</string>
+
+    <string name="txt_network_error">इंटरनेट नहीं है !</string>
+    <string name="txt_please_wait">कृपया प्रतीक्षा करें...</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="send_txt">Send Sms</string>
+    <string name="submit">सबमिट</string>
+    <string name="heading_txt">हैडिंग<font fgcolor="red">*</font></string>
+    <string name="sub_heading_txt">सबहैडिंग<font fgcolor="red">*</font></string>
+    <string name="domain_txt">डोमेन<font fgcolor="red">*</font></string>
+    <string name="category_txt">केटेगरी<font fgcolor="red">*</font></string>
+    <string name="scope_txt">स्कोप<font fgcolor="red">*</font></string>
+    <string name="priority_txt">प्रायोरिटी<font fgcolor="red">*</font></string>
+    <string name="personality_topic_txt">टैग्स/पर्सनेल्टी<font fgcolor="red">*</font></string>
+    <string name="intro_txt">इंट्रोडक्शन</string>
+    <string name="body_txt">बॉडी<font fgcolor="red">*</font></string>
+    <string name="cant_edit_process_txt">इन प्रोसेस न्यूज़ को एडिट नहीं कर सकते</string>
+    <string name="cant_edit_outbox_txt">इन आउटबॉक्स न्यूज़ को एडिट नहीं कर सकते</string>
+    <string name="cant_edit_approved_txt">इन अप्रूव्ड न्यूज़ को एडिट नहीं कर सकते</string>
+    <string name="please_speak_txt">प्लीज़ अब बोलो</string>
+    <string name="save_draft_txt">न्यूज़ ड्राफ्ट मे सेव हो गयी है</string>
+    <string name="submit_news_txt">न्यूज़ सफलतापूर्व सब्मिट हो गयी है</string>
+    <string name="sms_sent_txt">एसएमएस भेज दिया गया है</string>
+    <string name="sms_failed_txt">एसएमएस जाने मे विफल रहा है, कृपया पुन: प्रयास करें.</string>
+    <string name="no_internet_saved_to_outbox">इंटरनेट नही है,न्यूज़ आउटबॉक्स मे सेव हो गयी है</string>
+    <string name="no_media_txt">मीडीया फाइल मौजूद नही है</string>
+    <string name="cant_share_more_image">10 से अधिक इमेज को साझा नहीं कर सकते</string>
+    <string name="cant_share_more_video">20 से अधिक वीडियो साझा नहीं कर सकते</string>
+    <string name="recording_started">रिकॉर्डिंग शुरू</string>
+    <string name="audio_recorded">ऑडियो सफलतापूर्वक दर्ज</string>
+    <string name="priority_set">न्यूज़ की प्रथमिकता सेट कर दी गयी है</string>
+    <string name="video_recorded">वीडियो सफलतापूर्वक रिकॉर्ड हो गया है</string>
+
+    <!-- sting login activity -->
+    <string name="hint_pin_name">पिन दर्ज करें</string>
+    <string name="txt_pin_short">पिन 4 नंबर का होना चाहिए</string>
+    <string name="hint_old_pin_name">पुराना पिन दर्ज करें</string>
+    <string name="hint_new_pin_name">नया पिन दर्ज करें</string>
+    <string name="hint_again_pin_name">दोबारा  पिन दर्ज करें</string>
+    <string name="hint_user_name">यूजरनेम दर्ज करें</string>
+    <string name="hint_password">पासवर्ड दर्ज करें</string>
+    <string name="hint_incorrect_password">सही पासवर्ड दर्ज करें</string>
+    <string name="hint_correct_password">सही पिन दर्ज करें</string>
+    <string name="txt_pin_changed">पिन बदल दिया गया है !</string>
+    <string name="txt_pin_set">पिन सेट कर दिया है !</string>
+    <string name="txt_enter_correct_pin">सही पिन दर्ज करें</string>
+    <string name="txt_pin_not_match">पिन मॅच नही हुआ</string>
+    <string name="txt_enter_pin">पिन दर्ज करें</string>
+    <string name="txt_remember_me">याद रखें</string>
+    <string name="txt_login">लॉग इन</string>
+    <string name="txt_eror">Error from server, please contact your system admin</string>
+    <string name="txt_limit_255">अधिकतम 255 कॅरक्टर</string>
+    <string name="txt_limit_140">अधिकतम 140 कॅरक्टर</string>
+    <string name="txt_limit_280">अधिकतम 280 कॅरक्टर</string>
+    <string name="txt_limit_560">अधिकतम 560 कॅरक्टर</string>
+
+    <!-- sting Main activity -->
+    <string name="txt_logout_message">क्या आप लॉग आउट करना चाहते हैं?</string>
+    <string name="txt_logout_message_queue">अभी कुछ न्यूज़ कतार/ड्राफ्ट में है, क्या आप लॉग आउट करना चाहते हैं?</string>
+
+    <!--  Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- sting detailed fragment -->
+    <string name="txt_photo">फ़ोटो</string>
+    <string name="txt_video">वीडियो</string>
+    <string name="txt_audio">ऑडियो</string>
+
+    <!-- sting menu item -->
+    <string name="discard">हटाए</string>
+    <string name="priorty">प्राथमिकता</string>
+    <string name="send">भेजें</string>
+
+    <!--tabs string-->
+    <string name="txt_publiesh_hindi">पब्लिश्ड</string>
+    <string name="txt_upload_hindi">अपलोड</string>
+    <string name="txt_month">माह</string>
+    <string name="txt_percentage">प्रतिशत</string>
+    <string name="published_txt">प्रकाशित</string>
+    <string name="not_published_txt">अप्रकाशित</string>
+    <string name="breaking_txt">ब्रेकिंग</string>
+    <string name="detail_txt">विस्तृत</string>
+    <string name="add_news_txt">नई न्यूज़</string>
+    <string name="detailed_news_txt">विस्तृत न्यूज़</string>
+    <string name="breaking_news_txt">ब्रेकिंग न्यूज़</string>
+    <string name="notification_txt">नोटिफिकेशन </string>
+    <string name="reports_txt">रिपोर्ट्स</string>
+    <string name="logout_txt">लॉग आउट</string>
+    <string name="pin_change_txt">पिन बदलें</string>
+    <string name="send_sms_text">इंटरनेट नहीं है, आप इस खबर को एसएमएस के माध्यम से भेजना चाहते हैं ?</string>
+    <!--<string name="send_sms_text">इंटरनेट नहीं है, आप इस खबर को एसएमएस के माध्यम से भेजना चाहते हैं</string>-->
+
+    <!--dialog string-->
+    <string name="txt_ok">ओके</string>
+    <string name="txt_yes">हाँ</string>
+    <string name="txt_no">नहीं</string>
+    <string name="btn_submit">सब्मिट</string>
+    <string name="btn_cancel">कॅन्सल</string>
+    <string name="txt_no_record_found">कोई रिकॉर्ड नहीं मिला!</string>
+    <string name="txt_no_record_found_with_hint">कोई रिकॉर्ड नहीं मिला  ! कृपया नयी न्यूज़ एड करने के लिए प्लस के निशान को दबाए. </string>
+
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_notification_acticity">NotificationActicity</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_stt">Stt</string>
+
+    <!--<string name="error_camera">Sorry! Your device does not support camera</string>-->
+    <string name="error_camera">माफ़ कीजिये! आपकी डिवाइस कैमरा का समर्थन नहीं करता</string>
+
+    <!--FTP Credentials-->
+
+    <!--<string name="ftp_host">ccmsftp.patrikatv.com</string>-->
+    <string name="ftp_host">115.248.192.214</string>
+    <string name="ftp_username">appforweb</string>
+    <string name="ftp_pass">UpL*@dF*rW$b@ap#</string>
+    याद रखें
+    <!--drawer item string-->
+    <string name="detailed_news">Detailed News</string>
+    <string name="breaking_news">Breaking News</string>
+    <string name="reports">Reports</string>
+    <string name="notification">Notification</string>
+    <string name="logout">Logout</string>
+    <string name="openDrawer">Drawer Open</string>
+    <string name="closeDrawer">Drawer Closed</string>
+    <string name="title_activity_pin_change_">PinChange_Activity</string>
+
+
+</resources>

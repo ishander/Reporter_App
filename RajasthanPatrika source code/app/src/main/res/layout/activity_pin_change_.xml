@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/input_layout_pass"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+
+            <!--app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout_custom_dialog">-->
+
+
+            <EditText
+                android:id="@+id/et_pin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/white_color"
+                android:textCursorDrawable="@null">
+
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/gray_view_color" />
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <EditText
+                android:id="@+id/et_re_enter_new_pin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="45dip"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/white_color"
+                android:textCursorDrawable="@null"></EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/gray_view_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="35dip"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_new_pin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/white_color"
+                android:textCursorDrawable="@null"
+                android:visibility="gone"></EditText>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/gray_view_color"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/btn_transparent_selector"
+                android:padding="10dp"
+                android:text="@string/btn_submit"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white_color" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

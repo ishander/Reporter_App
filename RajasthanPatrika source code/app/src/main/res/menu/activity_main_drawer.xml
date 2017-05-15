@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/detail"
+            android:checked="false"
+            android:icon="@drawable/new_detail_gray"
+            android:title="@string/detailed_news_txt"
+            app:actionLayout="@layout/content_main_news"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/breaking"
+            android:checked="false"
+            android:icon="@drawable/news_breaking_gray"
+            android:title="@string/breaking_news_txt"
+            app:actionLayout="@layout/content_main_news"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/reports"
+            android:checked="false"
+            android:icon="@drawable/news_breaking_gray"
+            android:title="@string/reports_txt"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/notification"
+            android:checked="false"
+            android:icon="@drawable/notification"
+            android:title="@string/notification_txt"
+            app:actionLayout="@layout/content_main"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/pin_change"
+            android:checked="false"
+            android:icon="@drawable/pin_icon"
+            android:title="@string/pin_change_txt"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/logout"
+            android:checked="false"
+            android:icon="@drawable/logout"
+            android:title="@string/logout_txt"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/video_camera"
+            android:checked="false"
+            android:icon="@drawable/video_white"
+            android:title=""
+            app:showAsAction="always" />
+
+    </group>
+</menu>

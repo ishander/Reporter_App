@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rajasthnapatrika_prod">
+
+    <permission
+        android:name="com.rajasthnapatrika_prod.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="com.rajasthnapatrika.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:name="com.rajasthnapatrika_prod.activities.AppController_Patrika"
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.rajasthnapatrika_prod.activities.Add_Stories_Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/add_story_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustResize" />
+        <activity
+            android:name="com.rajasthnapatrika_prod.activities.SplashActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/no_action_bar_theme"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rajasthnapatrika_prod.activities.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/no_action_bar_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- to handle multi image intent -->
+        <activity
+            android:name="com.rajasthnapatrika_prod.pick.CustomGalleryActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="luminous.ACTION_MULTIPLE_PICK_IMAGE" />
+                <action android:name="luminous.ACTION_MULTIPLE_PICK_VIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- services to execute background uploading -->
+        <service android:name="com.rajasthnapatrika_prod.service.Background_Uploading" />
+
+        <!-- services to execute APIS in Background -->
+        <service android:name="com.rajasthnapatrika_prod.service.Service_to_get_Credentials" />
+
+        <!-- services and receiver to catch GCM notification -->
+        <service
+            android:name="com.rajasthnapatrika_prod.activities.GcmIntentService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.rajasthnapatrika_prod.activities.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <action android:name="com.google.android.c2dm.intent.GCM_RECEIVED_ACTION" />
+
+                <category android:name="com.rajasthnapatrika.activities" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.rajasthnapatrika_prod.activities.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.rajasthnapatrika_prod.activities.MyAlarmReceiver"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.rajasthnapatrika_prod.activities.Drawer_Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/no_action_bar_theme" />
+        <activity
+            android:name="com.rajasthnapatrika_prod.activities.PinChange_Activity"
+            android:label="@string/title_activity_pin_change_"
+            android:screenOrientation="portrait"
+            android:theme="@style/add_story_theme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustNothing"></activity>
+    </application>
+
+</manifest>
